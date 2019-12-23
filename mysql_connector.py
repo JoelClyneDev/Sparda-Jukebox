@@ -4,7 +4,33 @@ from dataclasses import dataclass
 import pafy
 import time
 import vlc
+from dataclasses import dataclass
 from inputimeout import inputimeout, TimeoutOccurred
+import threading
+import sys, select
+import signal
+import os
+from func_timeout import func_timeout, FunctionTimedOut
+
+def timeout(func):
+    def inner_func(*nums, **kwargs):
+        t = threading.Thread(target=func, args=(*nums,))
+        t.start()
+        t.join(timeout=22)
+    return inner_func
+
+
+def timed_input():
+    try:
+            print('You have 5 seconds to type in your stuff...')
+            foo = input()
+            return foo
+    except:
+            # timeout
+            return
+
+# set alarm
+
 
 
 def create_connection(db_file):
@@ -130,6 +156,7 @@ def stream_the_song(song, playlist):
     music = best.url
     # starts vlc player?
     Instance = vlc.Instance()
+
     # if i call this it makes a media player
     player = Instance.media_player_new()
     # makes the media player
@@ -138,9 +165,11 @@ def stream_the_song(song, playlist):
     Media.get_mrl()
     # puts the instance in motion?
     player.set_media(Media)
+
     # plays the song
+
     player.play()
-    time.sleep(1.5)  # Or however long you expect it to take to open vlc
+    time.sleep(1)  # Or however long you expect it to take to open vlc
     print(name)
     print("Player Controls\n"
           "s - stop\n"
@@ -150,28 +179,56 @@ def stream_the_song(song, playlist):
           "")
     #puts the controls in another thread and kills it when the song is over
     duration = player.get_length() / 1000
+    print(duration)
     controls(player, playlist, duration)
     print(player.get_state())
 
 def controls(player, playlist, duration):
     #makes an infinte loop which keeps pycharm from closing the player while also allowing the user the play or pause
+    old_time = time.time()
     end_time = time.time() + duration
-    while time.time() < end_time:
+    za_wardo = False
+    while time.time() < end_time > 0:
         #the input will time out at the end of the song
+        # disable the alarm after success
         try:
-            nextcmd = inputimeout(prompt="", timeout=duration).lower()
-        except TimeoutOccurred:
+            nextcmd = func_timeout(duration, input, args="")
+        except FunctionTimedOut:
+            nextcmd = None
+        except Exception as e:
             nextcmd = None
         #process user input
+        """
+        """
+        #total time of song - how long the song has been playing since the last reset
         if nextcmd == "p":
             player.pause()
+            #toggle pause and resume time
+            za_wardo = not za_wardo
+            if za_wardo == True:
+                freeze_time = time.time()
+            else:
+                #time while paused
+                freeze_time = time.time() - freeze_time
+                print(freeze_time, "galactic fart")
+                elapsed_time = time.time() - old_time
+                old_time = time.time()
+                duration = duration + freeze_time - elapsed_time
+                end_time = end_time + freeze_time
+                print(duration, "current")
         elif nextcmd == "s":
             player.stop()
             break
         elif nextcmd == "a":
             playlist += [select_song()]
         elif nextcmd == "e":
-            stream_the_song(select_song())
+            # if theres one playing before it, its time to stop
+            player.stop()
+            stream_the_song(select_song(), playlist)
+
+
+
+
 
 
 
