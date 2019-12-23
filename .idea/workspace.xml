@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b288c3af-6d8f-4bf9-8452-e3995796ad73" name="Default Changelist" comment="implemented command functionality" />
+    <list default="true" id="b288c3af-6d8f-4bf9-8452-e3995796ad73" name="Default Changelist" comment="implemented command functionality">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,6 +200,7 @@
       <workItem from="1577065869637" duration="999000" />
       <workItem from="1577066880539" duration="514000" />
       <workItem from="1577067476858" duration="21992000" />
+      <workItem from="1577122828398" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="implemented command functionality">
       <created>1577116339523</created>
@@ -245,22 +249,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="499" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1577064878704" />
-    <state width="1397" height="276" key="GridCell.Tab.0.bottom" timestamp="1577122286487">
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom" timestamp="1577123075235">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="276" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
-    <state width="1397" height="276" key="GridCell.Tab.0.center" timestamp="1577122286487">
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577123075235" />
+    <state width="1397" height="222" key="GridCell.Tab.0.center" timestamp="1577123075235">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="276" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
-    <state width="1397" height="276" key="GridCell.Tab.0.left" timestamp="1577122286486">
+    <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577123075235" />
+    <state width="1397" height="222" key="GridCell.Tab.0.left" timestamp="1577123075234">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="276" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577122286486" />
-    <state width="1397" height="276" key="GridCell.Tab.0.right" timestamp="1577122286487">
+    <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577123075234" />
+    <state width="1397" height="222" key="GridCell.Tab.0.right" timestamp="1577123075235">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="276" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
+    <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577123075235" />
     <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1577122286487">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -281,10 +285,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="221" y="73" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1577064917380" />
-    <state x="421" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1577067477338">
+    <state x="421" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1577122829233">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="421" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1577067477338" />
+    <state x="421" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1577122829233" />
     <state x="529" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577116297231">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -299,6 +303,7 @@
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$croos.coverage" NAME="croos Coverage Results" MODIFIED="1576559472215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$initialization.coverage" NAME="main_command Coverage Results" MODIFIED="1577120016416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577071460837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sparda_Jukebox$main_command.coverage" NAME="main_command Coverage Results" MODIFIED="1577123075220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$fuzzy_test.coverage" NAME="fuzzy_test Coverage Results" MODIFIED="1577069742754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

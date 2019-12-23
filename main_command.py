@@ -95,13 +95,17 @@ def add_playlist(song_title, arguments):
 def close_program():
     sys.exit()
 
+def skip():
+    player.next()
+
 command_dictionary = {
     "prompt": prompt_mode,
     "play": play_song,
     "p": pause,
     "s": stop,
     "add": add_playlist,
-    "exit": close_program
+    "exit": close_program,
+    "skip": skip
 }
 
 #these are sorta part of the main, but dont work with other files unless theyre outside
