@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b288c3af-6d8f-4bf9-8452-e3995796ad73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fuzzy_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playlist_operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_retrieval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_prompter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DMC_JukeboxV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DMC_JukeboxV2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09c77be4-fd4e-48e2-87c4-985f52c56f7f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09c77be4-fd4e-48e2-87c4-985f52c56f7f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql_connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_connector.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,29 +58,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="G:\Dev\Sparda-Jukebox\.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1UdpXYEPC1fGzsXDumMweBmcWhY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PyCharmInterpreter" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.mysql_connector">
+  <component name="RunManager" selected="Python.main_command">
     <configuration name="croos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DMC_JukeboxV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,6 +97,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/croos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fuzzy_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DMC_JukeboxV2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="G:\Dev\Sparda-Jukebox\fuzzy_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DMC_JukeboxV2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="G:\Dev\Sparda-Jukebox\main_command.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,44 +173,23 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main_command" />
         <item itemvalue="Python.mysql_connector" />
+        <item itemvalue="Python.fuzzy_test" />
         <item itemvalue="Python.croos" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@93ece5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@93ece5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@a32e933" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@93ece5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3979d6ae" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@93ece5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4225f65f" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@93ece5d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2c4cd7b7" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -173,6 +205,10 @@
       <workItem from="1575696368089" duration="16972000" />
       <workItem from="1576306666952" duration="14030000" />
       <workItem from="1576559946618" duration="10573000" />
+      <workItem from="1577064640293" duration="702000" />
+      <workItem from="1577065869637" duration="999000" />
+      <workItem from="1577066880539" duration="514000" />
+      <workItem from="1577067476858" duration="17661000" />
     </task>
     <servers />
   </component>
@@ -195,8 +231,73 @@
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577065242509">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1577065242509" />
+    <state x="798" y="60" key="#fuzzy_test" timestamp="1577069326035">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="798" y="60" key="#fuzzy_test/0.0.1440.860@0.0.1440.860" timestamp="1577069326035" />
+    <state x="499" y="185" key="FileChooserDialogImpl" timestamp="1577064878704">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="499" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1577064878704" />
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom" timestamp="1577087477500">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
+    <state width="1397" height="222" key="GridCell.Tab.0.center" timestamp="1577087477500">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
+    <state width="1397" height="222" key="GridCell.Tab.0.left" timestamp="1577087477500">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
+    <state width="1397" height="222" key="GridCell.Tab.0.right" timestamp="1577087477500">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
+    <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1577080114369">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577080114369" />
+    <state width="1397" height="276" key="GridCell.Tab.1.center" timestamp="1577080114369">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1577080114369" />
+    <state width="1397" height="276" key="GridCell.Tab.1.left" timestamp="1577080114369">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1577080114369" />
+    <state width="1397" height="276" key="GridCell.Tab.1.right" timestamp="1577080114369">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="276" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1577080114369" />
+    <state x="221" y="73" key="SettingsEditor" timestamp="1577064917380">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="221" y="73" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1577064917380" />
+    <state x="421" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1577067477338">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="421" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1577067477338" />
+    <state x="529" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577116297231">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="529" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1577116297231" />
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1577086925966">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1577086925966" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DMC_JukeboxV2$croos.coverage" NAME="croos Coverage Results" MODIFIED="1576559472215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577060832401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DMC_JukeboxV2$croos.coverage" NAME="croos Coverage Results" MODIFIED="1576559472215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sparda_Jukebox$initialization.coverage" NAME="main_command Coverage Results" MODIFIED="1577087477492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sparda_Jukebox$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577071460837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sparda_Jukebox$fuzzy_test.coverage" NAME="fuzzy_test Coverage Results" MODIFIED="1577069742754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
