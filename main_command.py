@@ -6,7 +6,7 @@ import vlc
 import threading
 import time
 import pafy
-
+import sys
 def create_connection(db_file):
     """ Accesses the song database """
     conn = None
@@ -92,12 +92,16 @@ def add_to_playlist(song_title, player, arguments):
 def add_playlist(song_title, arguments):
     add_to_playlist(song_title, player, arguments)
 
+def close_program():
+    sys.exit()
+
 command_dictionary = {
     "prompt": prompt_mode,
     "play": play_song,
     "p": pause,
     "s": stop,
     "add": add_playlist,
+    "exit": close_program
 }
 
 #these are sorta part of the main, but dont work with other files unless theyre outside
