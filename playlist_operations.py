@@ -26,25 +26,24 @@ def operate_playlist(playlist, prev_songs = []):
         operate_playlist(playlist, prev_songs)
 
 
-def command_playlist(playlist, prev_songs = []):
+def command_playlist(player, prev_songs = []):
     """
     manages the playlists without inputs for the commnand mode
     :param player:
     :param playlist:
     :param duration:
     :return:
-    """
-    old_playlist = playlist
+     old_playlist = playlist
     for song in playlist:
-        playlist_ctrl = threading.Thread(target=song_retrieval.stream_the_song, args=(song, main_command.Instance, main_command.player), name='Playlist_control')
-        playlist_ctrl.start()
-        time.sleep(10)
+        song_retrieval.stream_the_song(song, main_command.Instance, main_command.player)
     if playlist != old_playlist:
         #when a song is added or removed from the playlist, removed the one that was just played and put it in prev
         prev_songs += [playlist[0]]
         playlist = playlist[1:]
         print("yeehaw")
         operate_playlist(playlist, prev_songs)
+    """
+   #ins
 
 def controls(player, playlist, duration):
     #makes an infinte loop which keeps pycharm from closing the player while also allowing the user the play or pause

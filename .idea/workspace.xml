@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b288c3af-6d8f-4bf9-8452-e3995796ad73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fuzzy_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playlist_operations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_retrieval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_prompter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DMC_JukeboxV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DMC_JukeboxV2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09c77be4-fd4e-48e2-87c4-985f52c56f7f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09c77be4-fd4e-48e2-87c4-985f52c56f7f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql_connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysql_connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playlist_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist_operations.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,8 +200,16 @@
       <workItem from="1577064640293" duration="702000" />
       <workItem from="1577065869637" duration="999000" />
       <workItem from="1577066880539" duration="514000" />
-      <workItem from="1577067476858" duration="17661000" />
+      <workItem from="1577067476858" duration="21052000" />
     </task>
+    <task id="LOCAL-00001" summary="implemented command functionality">
+      <created>1577116339523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577116339523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +229,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="implemented command functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented command functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577065242509">
@@ -240,26 +241,30 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="798" y="60" key="#fuzzy_test/0.0.1440.860@0.0.1440.860" timestamp="1577069326035" />
+    <state x="345" y="25" key="CommitChangelistDialog2" timestamp="1577119693515">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="345" y="25" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1577119693515" />
     <state x="499" y="185" key="FileChooserDialogImpl" timestamp="1577064878704">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="499" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1577064878704" />
-    <state width="1397" height="222" key="GridCell.Tab.0.bottom" timestamp="1577087477500">
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom" timestamp="1577119621110">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
-    <state width="1397" height="222" key="GridCell.Tab.0.center" timestamp="1577087477500">
+    <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577119621110" />
+    <state width="1397" height="222" key="GridCell.Tab.0.center" timestamp="1577119621110">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
-    <state width="1397" height="222" key="GridCell.Tab.0.left" timestamp="1577087477500">
+    <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577119621110" />
+    <state width="1397" height="222" key="GridCell.Tab.0.left" timestamp="1577119621110">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
-    <state width="1397" height="222" key="GridCell.Tab.0.right" timestamp="1577087477500">
+    <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577119621110" />
+    <state width="1397" height="222" key="GridCell.Tab.0.right" timestamp="1577119621110">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577087477500" />
+    <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577119621110" />
     <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1577080114369">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -288,15 +293,15 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="529" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1577116297231" />
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1577086925966">
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1577117675030">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1577086925966" />
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1577117675030" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577060832401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$croos.coverage" NAME="croos Coverage Results" MODIFIED="1576559472215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Sparda_Jukebox$initialization.coverage" NAME="main_command Coverage Results" MODIFIED="1577087477492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sparda_Jukebox$initialization.coverage" NAME="main_command Coverage Results" MODIFIED="1577119621105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577071460837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$fuzzy_test.coverage" NAME="fuzzy_test Coverage Results" MODIFIED="1577069742754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

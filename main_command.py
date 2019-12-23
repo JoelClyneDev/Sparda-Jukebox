@@ -5,6 +5,7 @@ import song_retrieval
 import vlc
 import threading
 import time
+import pafy
 
 def create_connection(db_file):
     """ Accesses the song database """
@@ -43,14 +44,20 @@ def prompt_mode():
     playlist_operations.operate_playlist(init_play)
 
 def play_song(song_title, arguments):
+    """
     if song_title == "playlist":
         playlist_operations.command_playlist(playlist)
     if "-id" in arguments:
         #get the song by its id
         result = song_by_id(song_title)
         song_retrieval.stream_the_song(result, Instance, player)
-    else:
+            else:
         print("the title")
+    """
+    add_to_playlist(song_title, player, arguments)
+    #Media.get_mrl()
+    player.play()
+
 
 def song_by_id(num):
     c = connection.cursor()
@@ -64,11 +71,26 @@ def pause():
 def stop():
     player.stop()
 
-def add_playlist(song_title, playlist, arguments):
+def add_to_playlist(song_title, player, arguments):
     if "-id" in arguments:
         #get the song by its id
+
         result = song_by_id(song_title)
-        playlist += [result]
+        name = result[1]
+        url = result[2]
+        # gets the song from youtube
+        video = pafy.new(url)
+        # whenever i get the video, get the best version
+        best = video.getbestaudio()
+        # gets the best version of the video
+        music = best.url
+        #add song to media list
+        Media.add_media(music)
+        #add media list to player
+        player.set_media_list(Media)
+
+def add_playlist(song_title, arguments):
+    add_to_playlist(song_title, player, arguments)
 
 command_dictionary = {
     "prompt": prompt_mode,
@@ -82,15 +104,18 @@ command_dictionary = {
 
 #create the connection to the database
 connection = create_connection('dmc_songs.db')
-#start VLC player and make it a new media player
+#start VLC player and make it a new media player, create an instance with a media list
 Instance = vlc.Instance()
-player = Instance.media_player_new()
+#sets up the intial empty media list
+Media = vlc.libvlc_media_list_new(Instance)
+#makesthe player
+player = vlc.libvlc_media_list_player_new(Instance)
 #make a dynamic playlist
 playlist = []
 
 def terminal_controls():
     while True:
-        print(playlist)
+        print(player.get_media_player())
         choice = input(">> ")
         #separate the elements in the response and process the first one
         #breaks the program if choice is none
@@ -101,12 +126,6 @@ def terminal_controls():
                 print("Dismal - Invalid Command")
             elif len(choice) == 1:
                 command_dictionary[choice[0]]()
-            elif choice[0] == "add":
-                # add the extraneous parameters to a set and use those as the potential arguments
-                arguments = set()
-                for arg in choice[2:]:
-                    arguments.add(arg)
-                command_dictionary[choice[0]](choice[1], playlist, arguments)
             else:
                 #add the extraneous parameters to a set and use those as the potential arguments
                 arguments = set()
