@@ -7,6 +7,8 @@ import threading
 import time
 import pafy
 import sys
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 def create_connection(db_file):
     """ Accesses the song database """
     conn = None
@@ -54,14 +56,23 @@ def play_song(song_title, arguments):
             else:
         print("the title")
     """
-    add_to_playlist(song_title, player, arguments)
+    player.stop()
+    add_to_playlist(song_title, player, arguments, playlist)
+    player.next()
     #Media.get_mrl()
     player.play()
 
+def fuzzy_search(search_name):
+    c = connection.cursor()
+    c.execute("SELECT title FROM DMC_SONG_LIST")
+    names = c.fetchall()
+    result = process.extractOne(search_name, names)
+    result = result[0][0]
+    return result
 
 def song_by_id(num):
     c = connection.cursor()
-    c.execute("SELECT id, title, url FROM DMC_SONG_LIST WHERE id = '%s'" % num)
+    c.execute("SELECT id, title, url FROM DMC_SONG_LIST WHERE id = ?", (num,))
     result = c.fetchone()
     return result
 
@@ -71,26 +82,41 @@ def pause():
 def stop():
     player.stop()
 
-def add_to_playlist(song_title, player, arguments):
-    if "-id" in arguments:
-        #get the song by its id
 
+def add_to_playlist(song_title, player, arguments, playlist):
+    if "--id" in arguments:
+        #get the song by its id
         result = song_by_id(song_title)
-        name = result[1]
-        url = result[2]
-        # gets the song from youtube
-        video = pafy.new(url)
-        # whenever i get the video, get the best version
-        best = video.getbestaudio()
-        # gets the best version of the video
-        music = best.url
-        #add song to media list
-        Media.add_media(music)
-        #add media list to player
-        player.set_media_list(Media)
+    else:
+        #get the name
+        name = fuzzy_search(song_title)
+        print(name)
+        #now the rest
+        c = connection.cursor()
+        c.execute("SELECT id, title, url FROM DMC_SONG_LIST WHERE title=?", (name,))
+        result = c.fetchone()
+        print(result)
+    #add the songs name to playlist
+    global new_song_name
+    new_song_name = result[1]
+    playlist += [new_song_name]
+    url = result[2]
+    # gets the song from youtube
+    video = pafy.new(url)
+    # whenever i get the video, get the best version
+    best = video.getbestaudio()
+    # gets the best version of the video
+    music = best.url
+    # add song to media list
+    Media.add_media(music)
+    # add media list to player
+    player.set_media_list(Media)
+    #add the title to the metadata
+
+
 
 def add_playlist(song_title, arguments):
-    add_to_playlist(song_title, player, arguments)
+    add_to_playlist(song_title, player, arguments, playlist)
 
 def close_program():
     sys.exit()
@@ -98,14 +124,53 @@ def close_program():
 def skip():
     player.next()
 
+def help_me():
+    print("Commands\n"
+          "play (name, id, playlist) - plays a song or playlist\n"
+          "  name is default\n"
+          "  use play playlist to play current playlist\n"
+          "  --id enable search by id\n"
+          "  --s to download song as mp3\n"
+          "prompt - change program to prompt user for song type\n"
+          "p - pause current song\n"
+          "s - stop current song\n"
+          "add - add song to playlist\n"
+          "  name is default\n"
+          "  -id enable search by id\n"
+          "  -s to download song as mp3\n"
+          "exit - close program\n"
+          "skip - skip current song in playlist     ")
+
+def view_playlist():
+    print(playlist)
+
+def back():
+    player.previous()
+
+def view_song():
+    temp = player.get_media_player().get_media()
+    temp.parse_with_options(1, 0)
+    while True:
+        if str(temp.get_parsed_status()) == 'MediaParsedStatus.done':
+            break  # Might be a good idea to add a failsafe in here.
+    temp.set_meta(1, new_song_name)
+    print(temp.get_meta(1))
+
+
+
 command_dictionary = {
+    "help": help_me,
     "prompt": prompt_mode,
     "play": play_song,
     "p": pause,
     "s": stop,
     "add": add_playlist,
     "exit": close_program,
-    "skip": skip
+    "skip": skip,
+    "view_p": view_playlist,
+    "back": back,
+    "view_c": view_song
+
 }
 
 #these are sorta part of the main, but dont work with other files unless theyre outside
@@ -118,18 +183,43 @@ Instance = vlc.Instance()
 Media = vlc.libvlc_media_list_new(Instance)
 #makesthe player
 player = vlc.libvlc_media_list_player_new(Instance)
-#make a dynamic playlist
+#make a dynamic playlist with the names
 playlist = []
 
 def terminal_controls():
     while True:
-        print(player.get_media_player())
+        song_list = player.get_media_player()
+        print(vlc.libvlc_media_player_is_seekable(song_list))
         choice = input(">> ")
         #separate the elements in the response and process the first one
         #breaks the program if choice is none
         if choice is not None:
+            """
+            if "\"" in choice:
+                choice_list = []
+                count = 0
+                while count < len(choice):
+                    if choice[len(choice)] == "\"":
+                        choice_list += choice[0: len(choice) - 1]
+            """
             choice = choice.split()
-            print(choice)
+            if "--id" not in choice and len(choice) != 1:
+                search_query = ""
+                count = 1
+                for i in choice[1:]:
+                    if "--" in i:
+                        break
+                    else:
+                        search_query = search_query + i + " "
+                        count += 1
+                search_query = search_query[:-1]
+                print(search_query)
+                temp_choice = [choice[0], search_query]
+                for arg in choice[count:]:
+                    temp_choice += [arg]
+                choice = temp_choice
+                if choice[1] == "":
+                    choice = [choice[0]]
             if choice[0] not in command_dictionary:
                 print("Dismal - Invalid Command")
             elif len(choice) == 1:
