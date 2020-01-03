@@ -65,15 +65,7 @@ def new_insert(name, title, game, category):
     :return:
     """
 
-"""
-How i made the table
-sql_create_projects_table = \""" CREATE TABLE IF NOT EXISTS DMC_SONG_LIST (
-                                            id integer PRIMARY KEY,
-                                            title text NOT NULL,
-                                            game text,
-                                            category text,
-                                            url text
-                                        ); \"""
+
 make_table(database, sql_create_projects_table)
 """
 
@@ -83,27 +75,7 @@ c = database.cursor()
 c.execute(\"""DROP TABLE dmc_songs\""")
 """
 
-"""
-this is how i add songs from a playlist
-# gets a pafy object (which is basically a song
-    dmc1_list = []
-    yt_obj = add_playlist_data('https://www.youtube.com/watch?v=RqaNQeyvBWw&list=PLA225E25C69EE9BC5')
 
-
-    id_num = 1000
-    #makes list of song objects
-    #switch out the playlist url for different songs
-    for num in range(len(yt_obj)):
-        # get the title
-        video_title = yt_obj[num].title[29:]
-        # get the id and change it into url
-        video_url = yt_obj[num].videoid
-        video_url = 'https://www.youtube.com/watch?v=' + video_url
-        dmc1_list += [Song(id_num, video_title, 'Devil May Cry', None, video_url)]
-        id_num += 1
-    #add songs to database
-    for song in dmc1_list:
-        add_song(connection,song)"""
 
 def add_song(song):
     """Inserts a song into a table"""
@@ -115,9 +87,7 @@ def add_song(song):
     except Error as e:
         print(e)
 
-def add_playlist_data(playlist_url):
-    playlist = pafy.get_playlist2(playlist_url)
-    return playlist
+
 
 def get_song_info(id_num):
     #use the id to access the song
