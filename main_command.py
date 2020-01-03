@@ -7,8 +7,11 @@ import threading
 import time
 import pafy
 import sys
+import youtube_dl
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+import subprocess
+
 def create_connection(db_file):
     """ Accesses the song database """
     conn = None
@@ -57,10 +60,13 @@ def play_song(song_title, arguments):
         print("the title")
     """
     player.stop()
-    add_to_playlist(song_title, player, arguments, playlist)
+    result = add_to_playlist(song_title, player, arguments, playlist)
     player.next()
     #Media.get_mrl()
     player.play()
+    if '--s' in arguments:
+        #the url is result[2]
+        save_song(result[2])
 
 def fuzzy_search(search_name):
     c = connection.cursor()
@@ -111,7 +117,8 @@ def add_to_playlist(song_title, player, arguments, playlist):
     Media.add_media(music)
     # add media list to player
     player.set_media_list(Media)
-    #add the title to the metadata
+    #useful for other stuff
+    return result
 
 
 
@@ -123,6 +130,29 @@ def close_program():
 
 def skip():
     player.next()
+
+def display_songs(arguments=None):
+    """
+    shows all of the songs based on game, type, or both
+    :return:
+    """
+    print(arguments, "dfsadfg")
+    c = connection.cursor()
+    if arguments is None:
+        #show everything
+        c.execute("SELECT id, title FROM DMC_SONG_LIST")
+    else:
+        for i in range(len(arguments)):
+            if arguments[i] == "--game":
+                game_name = arguments[i + 1]
+                c.execute("SELECT id, title FROM DMC_SONG_LIST WHERE game=?", (game_name,))
+            elif arguments[i] == "--genre":
+                genre_name = arguments[i + 1]
+                c.execute("SELECT id, title FROM DMC_SONG_LIST WHERE category=?", (genre_name,))
+    for value in c.fetchall():
+        print(value)
+
+
 
 def help_me():
     print("Commands\n"
@@ -136,13 +166,17 @@ def help_me():
           "s - stop current song\n"
           "add - add song to playlist\n"
           "  name is default\n"
-          "  -id enable search by id\n"
-          "  -s to download song as mp3\n"
+          "  --id enable search by id\n"
+          "  --s to download song as mp3\n"
           "exit - close program\n"
-          "skip - skip current song in playlist     ")
+          "skip - skip current song in playlist")
 
 def view_playlist():
     print(playlist)
+
+def save_song(url):
+    print(url)
+    subprocess.run(["youtube-dl", url, "-x", "--audio-format", "mp3"], shell=True)
 
 def back():
     player.previous()
@@ -169,7 +203,8 @@ command_dictionary = {
     "skip": skip,
     "view_p": view_playlist,
     "back": back,
-    "view_c": view_song
+    "view_c": view_song,
+    "list": display_songs
 
 }
 
@@ -203,7 +238,9 @@ def terminal_controls():
                         choice_list += choice[0: len(choice) - 1]
             """
             choice = choice.split()
+            #its looking for a name not an id
             if "--id" not in choice and len(choice) != 1:
+                
                 search_query = ""
                 count = 1
                 for i in choice[1:]:
