@@ -131,11 +131,13 @@ def close_program():
 def skip():
     player.next()
 
-def display_songs(arguments=None):
+def display_songs(tech_arguements= None, arguments=None):
     """
     shows all of the songs based on game, type, or both
+    tech arguments is for cheating choice[1] into arguments
     :return:
     """
+    arguments = [tech_arguements] + arguments
     print(arguments, "dfsadfg")
     c = connection.cursor()
     if arguments is None:
@@ -239,33 +241,48 @@ def terminal_controls():
             """
             choice = choice.split()
             #its looking for a name not an id
+            print(choice, "fsdaff")
             if "--id" not in choice and len(choice) != 1:
-                
+                print("yes")
                 search_query = ""
                 count = 1
+                #if theres no --, its a something to search for
+                new_choice = [choice[0]]
                 for i in choice[1:]:
-                    if "--" in i:
-                        break
+                    if i[0:2] == "--":
+                        if count > 1:
+                            search_query = search_query[:-1]
+                            new_choice += [search_query]
+                            search_query = ""
+                        new_choice += [i]
                     else:
                         search_query = search_query + i + " "
                         count += 1
-                search_query = search_query[:-1]
-                print(search_query)
+                if search_query != "":
+                    search_query = search_query[:-1]
+                    new_choice += [search_query]
+                #removes the last space in the search query
+                """
                 temp_choice = [choice[0], search_query]
                 for arg in choice[count:]:
                     temp_choice += [arg]
                 choice = temp_choice
+                print(choice)
+                """
+                choice = new_choice
                 if choice[1] == "":
                     choice = [choice[0]]
+                print(choice)
+            #print(choice)
             if choice[0] not in command_dictionary:
                 print("Dismal - Invalid Command")
             elif len(choice) == 1:
                 command_dictionary[choice[0]]()
             else:
                 #add the extraneous parameters to a set and use those as the potential arguments
-                arguments = set()
+                arguments = []
                 for arg in choice[2:]:
-                    arguments.add(arg)
+                    arguments += [arg]
                 command_dictionary[choice[0]](choice[1], arguments)
                 #they will be like id_num=True
 

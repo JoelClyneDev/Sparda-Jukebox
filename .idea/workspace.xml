@@ -224,7 +224,7 @@
       <workItem from="1577067476858" duration="21992000" />
       <workItem from="1577122828398" duration="1067000" />
       <workItem from="1577677981898" duration="13114000" />
-      <workItem from="1578080238583" duration="3218000" />
+      <workItem from="1578080238583" duration="5342000" />
     </task>
     <task id="LOCAL-00001" summary="implemented command functionality">
       <created>1577116339523</created>
@@ -278,42 +278,46 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="499" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1577064878704" />
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1578083367394">
+    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1578085531112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577123075235" />
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578083367394" />
-    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1578083367393">
+    <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578085531112" />
+    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1578085531112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577123075235" />
-    <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578083367393" />
-    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1578083367393">
+    <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578085531112" />
+    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1578085531112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577123075234" />
-    <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578083367393" />
-    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1578083367393">
+    <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578085531112" />
+    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1578085531112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577123075235" />
-    <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578083367393" />
-    <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1577122286487">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578085531112" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1578084711303">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="276" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
-    <state width="1397" height="276" key="GridCell.Tab.1.center" timestamp="1577122286487">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578084711303" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1578084711303">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="276" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
-    <state width="1397" height="276" key="GridCell.Tab.1.left" timestamp="1577122286487">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578084711303" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1578084711303">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="276" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
-    <state width="1397" height="276" key="GridCell.Tab.1.right" timestamp="1577122286487">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578084711303" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1578084711303">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1397" height="276" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1577122286487" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400/2560.533.1440.860@0.0.2560.1400" timestamp="1578084711303" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1577680253207">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -346,7 +350,7 @@
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$croos.coverage" NAME="croos Coverage Results" MODIFIED="1576559472215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$initialization.coverage" NAME="main_command Coverage Results" MODIFIED="1577120016416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577071460837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Sparda_Jukebox$main_command.coverage" NAME="main_command Coverage Results" MODIFIED="1578083367387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sparda_Jukebox$main_command.coverage" NAME="main_command Coverage Results" MODIFIED="1578085531106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$fuzzy_test.coverage" NAME="fuzzy_test Coverage Results" MODIFIED="1577069742754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
