@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b288c3af-6d8f-4bf9-8452-e3995796ad73" name="Default Changelist" comment="implemented command functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_attributes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_player_attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_player_attributes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media_player_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_player_commands.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -247,7 +243,7 @@
       <workItem from="1579037586664" duration="2353000" />
       <workItem from="1579130223231" duration="4836000" />
       <workItem from="1579742875553" duration="404000" />
-      <workItem from="1579752834574" duration="10016000" />
+      <workItem from="1579752834574" duration="10314000" />
     </task>
     <task id="LOCAL-00001" summary="implemented command functionality">
       <created>1577116339523</created>

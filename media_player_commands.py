@@ -137,7 +137,7 @@ def view_playlist():
 
 @dataclass
 class MediaCommands:
-    # atr means atribute
+    # atr means attribute
     play_atr: play_song
     add_to_playlist_atr : add_to_playlist
     add_playlist_atr : add_playlist
