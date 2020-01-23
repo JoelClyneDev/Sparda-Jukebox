@@ -3,16 +3,18 @@ from database_attributes import true_database
 from media_player_attributes import true_media_player
 import pafy
 import subprocess
+import vlc
 
 
 song_by_id = true_database.list_songs
 fuzzy_search = true_database.name_search
 connection = true_database.connect
 Instance = true_media_player.instance
-Media = true_media_player.media
+MediaList = true_media_player.media_list
 player = true_media_player.player
 playlist = true_media_player.playlist
 playlist_num = true_media_player.playlist_num
+playlist_gen = true_media_player.playlist_gen
 
 def play_song(song_title, arguments):
     """
@@ -26,9 +28,10 @@ def play_song(song_title, arguments):
         print("the title")
     """
     player.stop()
-    result = add_to_playlist(song_title, player, arguments, playlist, playlist_num)
-    player.play()
-    player.next()
+    result = add_to_playlist(song_title, player, arguments, playlist, true_media_player.playlist_num)
+
+    player.play_item_at_index(true_media_player.playlist_num), "hmm"
+    #player.next()
     # Media.get_mrl()
 
     if '--s' in arguments:
@@ -42,7 +45,7 @@ def save_song(url):
 def add_to_playlist(song_title, player, arguments, playlist, playlist_num):
     if "--id" in arguments:
         # get the song by its id
-        result = song_by_id(song_title)
+        result = true_database.id_search(song_title)
     else:
         # get the name
         name = fuzzy_search(song_title)
@@ -55,8 +58,7 @@ def add_to_playlist(song_title, player, arguments, playlist, playlist_num):
     # add the songs name to playlist
     global new_song_name
     new_song_name = result[1]
-    playlist += [new_song_name]
-    playlist_num += 1
+    #playlist += [new_song_name]
     url = result[2]
     # gets the song from youtube
     video = pafy.new(url)
@@ -64,15 +66,34 @@ def add_to_playlist(song_title, player, arguments, playlist, playlist_num):
     best = video.getbestaudio()
     # gets the best version of the video
     music = best.url
+    temp_media = Instance.media_new(music)
+    temp_media.get_mrl()
+    set_meta(temp_media, new_song_name)
+    MediaList.add_media(temp_media)
+    player.set_media_list(MediaList)
+    true_media_player.playlist_num += 1
+    print("bro")
+    #turn the music url into a media player object so i can give it metadata
+    # set the title and get the specfic song now
+
     # add song to media list
-    Media.add_media(music)
+
     # add media list to player
-    player.set_media_list(Media)
+
+
     # useful for other stuff
     return result
 
 def add_playlist(song_title, arguments):
     add_to_playlist(song_title, player, arguments, playlist, playlist_num)
+
+def set_meta(Media, new_song_name):
+    Media.parse_with_options(1, 0)
+    # wait till its done
+    while True:
+        if str(Media.get_parsed_status()) == 'MediaParsedStatus.done':
+            break  # Might be a good idea to add a failsafe in here because what if it never finishes?
+    Media.set_meta(1, new_song_name)
 
 
 def pause():
@@ -94,21 +115,13 @@ def skip():
 def back():
     global playlist_num
     if playlist_num + 1 <= 0:
-        playlist_num += 1
+        playlist_num = 1
         player.previous()
 
 
 def view_song():
     # gets currently playing song
-    new_song_name = playlist[playlist_num]
     temp = player.get_media_player().get_media()
-    # parses the songs to enable metadata collection
-    temp.parse_with_options(1, 0)
-    # wait till its done
-    while True:
-        if str(temp.get_parsed_status()) == 'MediaParsedStatus.done':
-            break  # Might be a good idea to add a failsafe in here because what if it never finishes?
-    temp.set_meta(1, new_song_name)
     print(temp.get_meta(1))
 
 
@@ -116,7 +129,7 @@ def view_song():
 
 
 def view_playlist():
-    print(playlist)
+    print(true_media_player.playlist_gen(true_media_player.media_list))
 
 
 
@@ -134,7 +147,8 @@ class MediaCommands:
     back_atr : back
     view_song_atr: view_song
     view_playlist_atr: view_playlist
+    set_meta_atr: set_meta
 
 
 # terminal : terminal_controls
-true_media_commands = MediaCommands(play_song, add_to_playlist, add_playlist, pause, stop, skip, back, view_song, view_playlist)
+true_media_commands = MediaCommands(play_song, add_to_playlist, add_playlist, pause, stop, skip, back, view_song, view_playlist, set_meta)

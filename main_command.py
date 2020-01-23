@@ -20,16 +20,11 @@ back = true_media_commands.back_atr
 view_song = true_media_commands.view_song_atr
 view_playlist = true_media_commands.view_playlist_atr
 
+
 #add the media player
 player = true_media_player.player
 
-
-
-
-
-
-
-
+list_songs = true_database.list_songs
 
 def close_program():
     sys.exit()
@@ -91,7 +86,7 @@ command_dictionary = {
     "view_p": view_playlist,
     "back": back,
     "view_c": view_song,
-    "list": true_database.list_songs,
+    "list": list_songs,
     "save": save_current
 
 }
@@ -170,6 +165,8 @@ def terminal_controls():
                 for arg in choice[2:]:
                     arguments += [arg]
                 # look in dictionary for correct string
+                print(choice)
+                print(arguments)
                 command_dictionary[choice[0]](choice[1], arguments)
 
 
@@ -178,6 +175,7 @@ def terminal_controls():
 
 
 def main():
+
     #tell user in beginning
     print("Welcome to Sparda's Jukebox, please enter a command below")
     print("Type help for a list of commands")

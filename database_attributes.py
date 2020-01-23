@@ -30,12 +30,14 @@ def song_by_id(num):
     result = c.fetchone()
     return result
 
-def display_songs(tech_arguements= None, arguments=None):
+def display_songs(arguments=None, tech_arguements= None):
     """
     shows all of the songs based on game, type, or both
     tech arguments is for cheating choice[1] into arguments
     :return:
     """
+    print(tech_arguements)
+    print(arguments)
     if tech_arguements is not None:
         arguments = [tech_arguements] + arguments
     print(arguments, "dfsadfg")
@@ -59,7 +61,7 @@ class Database:
     connect: sqlite3.Connection
     name_search: fuzzy_search
     id_search: song_by_id
-    list_songs : display_songs
+    list_songs: display_songs
 
 
 #create the connection to the database
