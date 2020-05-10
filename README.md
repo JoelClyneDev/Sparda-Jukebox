@@ -15,9 +15,9 @@ Python 3.8XX
 1. Clone the repository
 
 2. In the command line, run 
-...
+,,,
 pip install -r PATH_TO_REPOSITORY/requirements.txt
-...
+,,,
 3. Run main_command.py in a python shell
 
 4. Start inputting commands
