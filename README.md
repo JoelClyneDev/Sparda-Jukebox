@@ -42,7 +42,7 @@ Can be: Battle, Boss, Menu, Cutscene
 
 #### play
 
-Plys the song of the specified name, ID, or beginning of the playlist. 
+Plays the song of the specified name, ID, or beginning of the playlist. (The song is added to the end of the playlist)
 Use --id to denote using a song id
 Use --s to save the file to the current directory as an mp3
 
@@ -53,3 +53,39 @@ play playlist
 play ... (-s)
 
 #### add 
+
+Adds a song of the specified name or ID to the end of the playlist
+Use --id to denote using a song id
+Use --s to save the file to the current directory as an mp3
+
+Usage 
+add SONG_NAME
+add SONG_ID --id
+add ... (-s)
+
+#### list
+
+Lists all of the available songs in the database with their game and ID number. Songs can be filtered by their game, genre, or both
+Use --game to specify game filter
+Use --genre to specify genre filter
+
+Usage 
+list --game GAME_NAME
+list --genre GENRE_NAME
+list --game GAME_NAME --genre GENRE_NAME (or vice versa)
+
+#### playback commands
+
+To use, just type the command's letter
+
+p - pause the current song
+s - stops the current song 
+skip - skips the current song, and plays the next one in the playlist
+save - saves the current song as an mp3 file
+exit - closes the program
+
+## Built with 
+
+* Python - processes user input through the terminal and calls VLC functions 
+* VLC - handles audio playback and the playlist
+* SQLite - stores all songs in the database and queries based on user input
