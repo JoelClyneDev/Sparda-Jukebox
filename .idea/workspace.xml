@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b288c3af-6d8f-4bf9-8452-e3995796ad73" name="Default Changelist" comment="implemented command functionality">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/DMC_JukeboxV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DMC_JukeboxV2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
@@ -9,11 +10,21 @@
       <change beforePath="$PROJECT_DIR$/database_attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_attributes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media_player_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_player_commands.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/gui_attributes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_attributes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_command.py" afterDir="false" />
+>>>>>>> 6206729ffc18b6d4908d94a1c7f393d26739ca84
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -30,6 +41,17 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="ohboy.db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dmc_songs.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dmc_songs.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -57,6 +79,9 @@
       </set>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1UdpXYEPC1fGzsXDumMweBmcWhY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -69,6 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -95,7 +121,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="fuzzy_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="gui_attributes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DMC_JukeboxV2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,7 +134,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="G:\Dev\Sparda-Jukebox\fuzzy_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui_attributes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,24 +209,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.database_mod" />
-      <item itemvalue="Python.fuzzy_test" />
-      <item itemvalue="Python.main_command" />
-      <item itemvalue="Python.mysql_connector" />
-      <item itemvalue="Python.main_command (1)" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main_command (1)" />
         <item itemvalue="Python.database_mod" />
-        <item itemvalue="Python.main_command" />
-        <item itemvalue="Python.mysql_connector" />
-        <item itemvalue="Python.fuzzy_test" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
+<<<<<<< HEAD
     <option name="viewStates">
       <list>
         <serviceView>
@@ -210,6 +227,25 @@
           </treeState>
         </serviceView>
       </list>
+=======
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@94f9aecf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@94f9aecf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1c5d8db1" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+>>>>>>> 6206729ffc18b6d4908d94a1c7f393d26739ca84
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -239,6 +275,7 @@
       <workItem from="1579037586664" duration="2353000" />
       <workItem from="1579130223231" duration="4836000" />
       <workItem from="1579742875553" duration="404000" />
+<<<<<<< HEAD
       <workItem from="1579752834574" duration="10314000" />
       <workItem from="1585008660638" duration="1727000" />
       <workItem from="1585671839813" duration="705000" />
@@ -247,6 +284,13 @@
       <workItem from="1585966683984" duration="2968000" />
       <workItem from="1586219246797" duration="850000" />
       <workItem from="1589129327457" duration="2852000" />
+=======
+      <workItem from="1579752834574" duration="16373000" />
+      <workItem from="1581531732926" duration="2658000" />
+      <workItem from="1583102675542" duration="33000" />
+      <workItem from="1583102752553" duration="1736000" />
+      <workItem from="1583471657665" duration="1219000" />
+>>>>>>> 6206729ffc18b6d4908d94a1c7f393d26739ca84
     </task>
     <task id="LOCAL-00001" summary="implemented command functionality">
       <created>1577116339523</created>
@@ -327,6 +371,7 @@
     <state x="996" y="342" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1585967027525" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$database_mod.coverage" NAME="database_mod Coverage Results" MODIFIED="1578089402075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$mysql_connector.coverage" NAME="mysql_connector Coverage Results" MODIFIED="1577060832401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DMC_JukeboxV2$main_command__1_.coverage" NAME="main_command (1) Coverage Results" MODIFIED="1579762798509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -336,5 +381,9 @@
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$main_command__1_.coverage" NAME="main_command (1) Coverage Results" MODIFIED="1589262622346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$main_command.coverage" NAME="main_command Coverage Results" MODIFIED="1578085531106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sparda_Jukebox$fuzzy_test.coverage" NAME="fuzzy_test Coverage Results" MODIFIED="1577069742754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/DMC_JukeboxV2$main_command__1_.coverage" NAME="main_command (1) Coverage Results" MODIFIED="1585686978289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DMC_JukeboxV2$database_mod.coverage" NAME="database_mod Coverage Results" MODIFIED="1583102761418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 6206729ffc18b6d4908d94a1c7f393d26739ca84
   </component>
 </project>

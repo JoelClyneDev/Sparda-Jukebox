@@ -1,13 +1,10 @@
 #get the database class from true_database
 from database_attributes import true_database
-
 from media_player_commands import true_media_commands
 from media_player_attributes import true_media_player
-#import playlist_operations
-#import song_retrieval
 import vlc
 import sys
-
+from dataclasses import dataclass
 
 #add all the commands
 play_song = true_media_commands.play_atr
@@ -28,11 +25,6 @@ list_songs = true_database.list_songs
 
 def close_program():
     sys.exit()
-
-
-
-
-
 
 def help_me():
     print("Commands\n"
@@ -113,10 +105,8 @@ def terminal_controls():
             #its looking for a name not an id
             #print(choice, "fsdaff")
             if "--id" not in choice and len(choice) != 1:
-                #print("yes")
                 search_query = ""
                 count = 1
-
                 #the first part of the list is the main command
                 new_choice = [choice[0]]
                 #search through everything that is not the main command
@@ -130,6 +120,8 @@ def terminal_controls():
                             search_query = search_query[:-1]
                             new_choice += [search_query]
                             search_query = ""
+                            new_choice += [i]
+                        else:
                             new_choice += [i]
                     else:
                         #add a space to the current search query string to separate the words and record the current
@@ -165,14 +157,17 @@ def terminal_controls():
                 for arg in choice[2:]:
                     arguments += [arg]
                 # look in dictionary for correct string
-                print(choice)
-                print(arguments)
+                print(choice, "aas")
+                print(choice[0],  "ff")
+                print(choice[1], "sa")
+                print(arguments, "as")
                 command_dictionary[choice[0]](choice[1], arguments)
 
-
-
-
-
+@dataclass
+class SystemFunctions:
+    command_dict: dict
+    close: close_program
+    assist: help_me
 
 def main():
 
