@@ -111,9 +111,9 @@ def terminal_controls():
             #breaks everything into a list
             choice = choice.split()
             #its looking for a name not an id
-            print(choice, "fsdaff")
+            #print(choice, "fsdaff")
             if "--id" not in choice and len(choice) != 1:
-                print("yes")
+                #print("yes")
                 search_query = ""
                 count = 1
 

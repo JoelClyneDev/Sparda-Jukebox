@@ -54,7 +54,7 @@ def display_songs(arguments=None, tech_arguements= None):
                 genre_name = arguments[i + 1]
                 c.execute("SELECT id, title FROM DMC_SONG_LIST WHERE category=?", (genre_name,))
     for value in c.fetchall():
-        print(value)
+        print(value[0], "-", value[1])
 
 @dataclass
 class Database:

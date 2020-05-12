@@ -99,24 +99,25 @@ def set_meta(Media, new_song_name):
 def pause():
     player.pause()
 
-
 def stop():
     player.stop()
 
 def skip():
-    global playlist_num
-    if playlist_num + 1 <= len(playlist):
-        playlist_num += 1
-        player.next()
+    player.next()
+    #global playlist_num
+    #if playlist_num + 1 <= len(playlist):
+        #playlist_num += 1
+
 
 
 
 
 def back():
-    global playlist_num
-    if playlist_num + 1 <= 0:
-        playlist_num = 1
-        player.previous()
+    player.previous()
+    #global playlist_num
+    #if playlist_num + 1 >= 0:
+        #playlist_num = 1
+
 
 
 def view_song():

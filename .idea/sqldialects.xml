@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/database_attributes.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/database_mod.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/main_command.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/media_player_commands.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/mysql_connector.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/song_retrieval.py" dialect="GenericSQL" />
   </component>
 </project>
