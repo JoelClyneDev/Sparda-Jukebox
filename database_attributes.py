@@ -36,8 +36,6 @@ def display_songs(tech_arguements= None, arguments=None):
     tech arguments is for cheating choice[1] into arguments
     :return:
     """
-    print(tech_arguements, "faduhsjhsddfdsfaj")
-    print(arguments, " dfasdfs")
     if tech_arguements is not None:
         arguments = [tech_arguements] + arguments
     c = connection.cursor()

@@ -10,7 +10,10 @@
       <auth-required>false</auth-required>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" negative="1" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="main" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>
@@ -26,6 +29,12 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="identifier.sqlite" uuid="34aed6ef-b71a-4f1c-94e1-0edc42c931dc">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <schema-mapping />
     </data-source>
   </component>
 </project>

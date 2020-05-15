@@ -29,18 +29,27 @@ def play_song(song_title, arguments):
     """
     player.stop()
     result = add_to_playlist(song_title, player, arguments, playlist, true_media_player.playlist_num)
-
     player.play_item_at_index(true_media_player.playlist_num), "hmm"
-    #player.next()
-    # Media.get_mrl()
-
     if '--s' in arguments:
         # the url is result[2]
         save_song(result[2])
 
-def save_song(url):
-    print(url)
-    subprocess.run(["youtube-dl", url, "-x", "--audio-format", "mp3"], shell=True)
+def find_song_by_title(song_title):
+    c = connection.cursor()
+    c.execute("SELECT id, title, url FROM DMC_SONG_LIST WHERE title = ?", (song_title,))
+    song = c.fetchone()
+    return song
+
+
+def save_song(url=None):
+    if url is not None:
+        subprocess.run(["youtube-dl", url, "-x", "--audio-format", "mp3"], shell=True)
+    else:
+        temp = player.get_media_player().get_media()
+        current_song_name = temp.get_meta(1)
+        current_song_url = find_song_by_title(current_song_name)[2]
+        subprocess.run(["youtube-dl", current_song_url, "-x", "--audio-format", "mp3"], shell=True)
+
 
 def add_to_playlist(song_title, player, arguments, playlist, playlist_num):
     if "--id" in arguments:
@@ -49,12 +58,12 @@ def add_to_playlist(song_title, player, arguments, playlist, playlist_num):
     else:
         # get the name
         name = fuzzy_search(song_title)
-        print(name)
         # now the rest
         c = connection.cursor()
         c.execute("SELECT id, title, url FROM DMC_SONG_LIST WHERE title=?", (name,))
         result = c.fetchone()
-        print(result)
+        print(result[1], "-", result[0])
+        print(result[2])
     # add the songs name to playlist
     global new_song_name
     new_song_name = result[1]
@@ -72,7 +81,6 @@ def add_to_playlist(song_title, player, arguments, playlist, playlist_num):
     MediaList.add_media(temp_media)
     player.set_media_list(MediaList)
     true_media_player.playlist_num += 1
-    print("bro")
     #turn the music url into a media player object so i can give it metadata
     # set the title and get the specfic song now
 
@@ -149,7 +157,8 @@ class MediaCommands:
     view_song_atr: view_song
     view_playlist_atr: view_playlist
     set_meta_atr: set_meta
+    save_atr: save_song
 
 
 # terminal : terminal_controls
-true_media_commands = MediaCommands(play_song, add_to_playlist, add_playlist, pause, stop, skip, back, view_song, view_playlist, set_meta)
+true_media_commands = MediaCommands(play_song, add_to_playlist, add_playlist, pause, stop, skip, back, view_song, view_playlist, set_meta, save_song)

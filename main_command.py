@@ -16,6 +16,7 @@ skip = true_media_commands.skip_atr
 back = true_media_commands.back_atr
 view_song = true_media_commands.view_song_atr
 view_playlist = true_media_commands.view_playlist_atr
+save_current = true_media_commands.save_atr
 
 
 #add the media player
@@ -33,7 +34,6 @@ def help_me():
           "  use play playlist to play current playlist\n"
           "  --id enable search by id\n"
           "  --s to download song as mp3\n"
-          "prompt - change program to prompt user for song type\n"
           "p - pause current song\n"
           "s - stop current song\n"
           "add - add song to playlist\n"
@@ -52,10 +52,9 @@ def help_me():
 
 
 
-
-def save_current():
-    pass
-
+"""def save_current(url):
+    true_media_commands.save_atr(url)
+"""
 
 #these are sorta part of the main, but dont work with other files unless theyre outside
 
@@ -85,31 +84,26 @@ command_dictionary = {
 
 
 def terminal_controls():
+    """
+    The loop for the command line which processes continually asks the user to input commands
+    this is not blocked by the current song playing
+    """
     while True:
         song_list = player.get_media_player()
-        print(vlc.libvlc_media_player_is_seekable(song_list))
         choice = input(">> ")
         #separate the elements in the response and process the first one
         #breaks the program if choice is none
         if choice is not None:
-            """
-            if "\"" in choice:
-                choice_list = []
-                count = 0
-                while count < len(choice):
-                    if choice[len(choice)] == "\"":
-                        choice_list += choice[0: len(choice) - 1]
-            """
             #breaks everything into a list
             choice = choice.split()
             #its looking for a name not an id
-            #print(choice, "fsdaff")
             if "--id" not in choice and len(choice) != 1:
                 search_query = ""
                 count = 1
                 #the first part of the list is the main command
                 new_choice = [choice[0]]
                 #search through everything that is not the main command
+
                 for i in choice[1:]:
                     # if there is a --, its new term and you stop going for new stuff in the current search term
                     if i[0:2] == "--":
@@ -132,20 +126,10 @@ def terminal_controls():
                 if search_query != "":
                     search_query = search_query[:-1]
                     new_choice += [search_query]
-
-                """
-                temp_choice = [choice[0], search_query]
-                for arg in choice[count:]:
-                    temp_choice += [arg]
-                choice = temp_choice
-                print(choice)
-                """
                 choice = new_choice
                 #ignores space from single words commands
                 if choice[1] == "":
                     choice = [choice[0]]
-                print(choice)
-            #print(choice)
             if choice[0] not in command_dictionary:
                 print("Dismal - Invalid Command")
             elif len(choice) == 1:
@@ -157,10 +141,6 @@ def terminal_controls():
                 for arg in choice[2:]:
                     arguments += [arg]
                 # look in dictionary for correct string
-                print(choice, "aas")
-                print(choice[0],  "ff")
-                print(choice[1], "sa")
-                print(arguments, "as")
                 command_dictionary[choice[0]](choice[1], arguments)
 
 @dataclass
