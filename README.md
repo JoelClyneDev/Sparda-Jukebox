@@ -87,11 +87,11 @@ list --game GAME_NAME --genre GENRE_NAME (or vice versa)
 
 To use, just type the command's letter
 
-p - pause the current song
-s - stops the current song 
-skip - skips the current song, and plays the next one in the playlist
-save - saves the current song as an mp3 file
-exit - closes the program
+* p - pause the current song
+* s - stops the current song 
+* skip - skips the current song, and plays the next one in the playlist
+* save - saves the current song as an mp3 file
+* exit - closes the program
 
 ## Built with 
 
