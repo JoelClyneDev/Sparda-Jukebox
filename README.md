@@ -85,7 +85,7 @@ list --game GAME_NAME --genre GENRE_NAME (or vice versa)
 
 #### playback commands
 
-To use, just type the command's letter
+To use, just type the command's letter or word
 
 * p - pause the current song
 * s - stops the current song 
