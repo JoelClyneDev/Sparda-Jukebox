@@ -69,16 +69,16 @@ def retrieve_values(playlist):
     song_list = []
     yt_obj = add_playlist_data(playlist)
     #set the starting id number
-    id_num = 2000
+    id_num = 5000
     #makes list of song objects
     #switch out the playlist url for different songs
     for num in range(len(yt_obj)):
         # get the title
-        video_title = yt_obj[num].title[29:]
+        video_title = yt_obj[num].title[24:]
         # get the id and change it into url
         video_url = yt_obj[num].videoid
         video_url = 'https://www.youtube.com/watch?v=' + video_url
-        song_list += [Song(id_num, video_title, 'Devil May Cry 2', None, video_url)]
+        song_list += [Song(id_num, video_title, 'Devil May Cry 5', None, video_url)]
         id_num += 1
     #add songs to database
     for song in song_list:
@@ -98,4 +98,8 @@ else:
     connection = create_connection(db_file)
     c = connection.cursor()
     #create_table("test table")
-    #retrieve_values("https://www.youtube.com/watch?v=YiT619aLWTI&list=PL71DA485A8238C2E9")
+    #retrieve_values("https://www.youtube.com/playlist?list=PLplWQWlFS077Y5SvPdCbfXsRTiP4tp2oV")
+    #Put your own Youtube API key here
+    #pafy.set_api_key("key")
+
+

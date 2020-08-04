@@ -66,10 +66,9 @@ def new_insert(name, title, game, category):
     """
 
 
-make_table(database, sql_create_projects_table)
-"""
 
 """
+make_table(database, sql_create_projects_table)
 how to delete
 c = database.cursor()
 c.execute(\"""DROP TABLE dmc_songs\""")

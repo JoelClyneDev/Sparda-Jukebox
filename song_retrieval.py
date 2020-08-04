@@ -1,7 +1,6 @@
 import pafy
 import vlc
 import time
-import playlist_operations
 import mysql_connector
 
 def stream_the_song(song, Instance, player, playlist=[]):
